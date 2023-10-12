@@ -1,0 +1,168 @@
+.todo-container {
+    background: #000;
+    margin: 5% auto; /* Set margin to 0 on top and bottom, and auto on left and right to center it */
+    width: 82%;
+    border-radius: 10px;
+    padding: 15px;
+    color: white;
+    text-align: center; /* Optional: Center the content inside the container */
+  }
+  
+.header {
+  font-size: 3em;
+  text-align: center;
+  font-weight: bold;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-shadow: 2px 4px 14px rgba(108, 186, 0, 0.5)
+    radial-gradient(circle, #553c9a, #ee4b2b);
+}
+.nine h1 {
+  text-align: center;
+  font-size: 50px;
+  text-transform: uppercase;
+  color: #ffffff;
+  letter-spacing: 1px;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+}
+.nine h1 span {
+  margin-top: 5px;
+  font-size: 15px;
+  color: #7d7575;
+  word-spacing: 1px;
+  font-weight: normal;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
+  grid-template-rows: 27px 0;
+  grid-gap: 40px;
+  align-items: center;
+}
+
+.nine h1 span:after,
+.nine h1 span:before {
+  content: " ";
+  display: block;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  height: 5px;
+  background-color: #f8f8f8;
+}
+
+.input-container {
+  background: #000;
+  padding: 0.5 rem;
+  border-radius: 1em;
+  border: 2px solid yellow;
+}
+.input {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: black;
+  background-color: white;
+  border: 1px;
+  border-radius: 1em;
+  padding: 0.5em;
+  margin-bottom: 4%;
+  width: 80%;
+}
+
+.add-btn {
+  border-radius: 32px;
+  font-size: 2em;
+  margin: 45px;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  background-color: greenyellow;
+}
+
+.list-tasks {
+  font-size: 3em;
+  font-weight: bold;
+  font-style: italic;
+  color: orange;
+  background: #000;
+  border: 1px solid yellow;
+  border-radius: 5px;
+  padding: 0.3em;
+  margin: 0.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.complete-tasks {
+  font-size: 3em;
+  font-weight: bold;
+  font-style: italic;
+  color: green;
+  background: #000;
+  border: 1px solid yellow;
+  border-radius: 5px;
+  padding: 0.3em;
+  margin: 0.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dlt-btn {
+  font-size: 1.4rem;
+  border-radius: 5px;
+  margin: 4px 7px;
+  padding: 14px 14px;
+  border: none;
+  cursor: pointer;
+  color: black;
+  float: right;
+  background: red;
+}
+.check {
+    transform: scale(3);
+    float: left;
+  }
+
+
+  * {
+    box-sizing: border-box;
+  }
+  :root {
+    --background-color: black;
+    --text-color: hsl(0, 0%, 100%);
+  }
+  body {
+    margin: 0;
+  }
+  .wrapper {
+    display: grid;
+    place-content: center;
+    background-color: var(--background-color);
+    min-height: 20vh;
+    font-family: "Oswald", sans-serif;
+    font-size: clamp(.5rem, 0.1rem + 4vw, 15rem);
+    font-weight: 100;
+    text-transform: uppercase;
+    color: var(--text-color);
+  }
+  
+  .wrapper > div {
+    grid-area: 1/1/-1/-1;
+  }
+  .top {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 48%, 0% 58%);
+  }
+  .bottom {
+    clip-path: polygon(0% 60%, 100% 50%, 100% 100%, 0% 100%);
+    color: transparent;
+    background: -webkit-linear-gradient(177deg, black 53%, var(--text-color) 65%);
+    background: linear-gradient(177deg, black 53%, var(--text-color) 65%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    transform: translateX(-0.02em);
+  }
+  
