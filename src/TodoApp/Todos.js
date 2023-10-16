@@ -8,16 +8,18 @@ function Todos() {
   let headerDisplayed = false;
   const [list, setList] = useState([]);
   const [count, setCount] = useState(0);
-  useEffect(()=>{
-    if(list.length-count<=0){
-      document.title=`${0} pending task`
-    }else{
-      document.title=`${list.length-count} pending task`
+  useEffect(() => {
+    if (list.length - count <= 0) {
+      document.title = `${0} pending task`;
+    } else {
+      document.title = `${list.length - count} pending task`;
     }
-  })
+  });
 
   const addTask = (title, status, id) => {
-    var dupli = list.some((val) => val.title.toLowerCase() == title.toLowerCase());
+    var dupli = list.some(
+      (val) => val.title.toLowerCase() === title.toLowerCase()
+    );
     if (dupli) {
       console.log("Duplicate");
     } else {
@@ -33,11 +35,10 @@ function Todos() {
   const completeTask = (id) => {
     var allList = [...list];
     allList.filter((val) => {
-      if (val.id == id.id) {
+      if (val.id === id.id) {
         id.status = true;
-        console.log("enttt");
         val = id;
-        setCount(count+1)
+        setCount(count + 1);
       }
     });
     setList(allList);
@@ -54,8 +55,8 @@ function Todos() {
           <AddTask addTask={addTask} />
         </div>
         <div className="tasks">
-          {list.map((val, index) => {
-            if (val.status == false) {
+          {list.map((val,index) => {
+            if (val.status === false) {
               return (
                 <ListTask
                   list={val}
@@ -73,10 +74,12 @@ function Todos() {
                 headerDisplayed = true;
                 return (
                   <div key={index}>
-                      <section className="wrapper">
-                        <div className="top">COMPLETED</div>
-                        <div className="bottom" aria-hidden="true">COMPLETED</div>
-                      </section>
+                    <section className="wrapper">
+                      <div className="top">COMPLETED</div>
+                      <div className="bottom" aria-hidden="true">
+                        COMPLETED
+                      </div>
+                    </section>
                     <ListCompletedTask
                       list={val}
                       removeTask={removeTask}
