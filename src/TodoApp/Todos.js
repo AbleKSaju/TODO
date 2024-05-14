@@ -21,7 +21,6 @@ function Todos() {
       (val) => val.title.toLowerCase() === title.toLowerCase()
     );
     if (dupli) {
-      console.log("Duplicate");
     } else {
       const newTask = [...list, { title, status, id }];
       setList(newTask);
@@ -55,7 +54,7 @@ function Todos() {
           <AddTask addTask={addTask} />
         </div>
         <div className="tasks">
-          {list.map((val,index) => {
+          {list.map((val, index) => {
             if (val.status === false) {
               return (
                 <ListTask
@@ -85,7 +84,7 @@ function Todos() {
                       removeTask={removeTask}
                       index={index}
                       key={index}
-                      completeTask={completeTask}
+                      // completeTask={completeTask}
                     />
                   </div>
                 );
@@ -96,7 +95,7 @@ function Todos() {
                   removeTask={removeTask}
                   index={index}
                   key={index}
-                  completeTask={completeTask}
+                  // completeTask={completeTask}
                 />
               );
             }
